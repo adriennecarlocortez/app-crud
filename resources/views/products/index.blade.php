@@ -10,9 +10,9 @@
 <body>
   <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Product</span>
+        <a href="{{route('product.index')}}" class="flex items-center space-x-3 rtl:space-x-reverse">
+            {{-- <img src="/images/svg/product.svg" class="h-8" alt="Product Logo" /> --}}
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Product</span>
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <a href="{{route('product.create')}}">
@@ -22,6 +22,7 @@
     </div>
   </nav>
   
+  {{-- Table --}}
   <div class="relative overflow-x-auto shadow-md sm:rounded-lg max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="border-b border-neutral-200 bg-[#332D2D] font-medium text-white dark:border-white/10">
@@ -80,7 +81,7 @@
     </table>
   </div>
 
-<!-- Main modal -->
+{{-- Session Success --}}
   <div>
     @if(session()->has('success'))
     <div>
