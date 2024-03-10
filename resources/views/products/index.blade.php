@@ -15,9 +15,10 @@
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Product</span>
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <a href="{{route('product.create')}}">
-          <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create Product</button>
-        </a>
+          {{-- Create Product Modal Toggle --}}
+          <button type="button" data-modal-target="create-product-modal" data-modal-toggle="create-product-modal" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create Product</button>
+          {{-- Create Product Modal --}}
+          @include('products.create')
       </div>
     </div>
   </nav>
@@ -67,11 +68,12 @@
                       {{$product->description}}
                   </td>
                   <td class="flex items-center px-6 py-4">
-                      <a href="{{route('product.edit', ['product' => $product])}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    {{-- href="{{route('product.edit', ['product' => $product])}}" --}}
+                      <a href="{{route('product.edit', ['product' => $product])}}" data-modal-target="edit-product-modal" data-modal-toggle="edit-product-modal" data-order="{{ $product->id }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                       <form method="post" action="{{route('product.destroy', ['product' => $product])}}">
                         @csrf
                         @method('delete')
-                        <button type="delete" data-modal-target="default-modal" data-modal-toggle="default-modal">
+                        <button type="delete">
                           <a class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a> </button>
                       </form>
                   </td>
@@ -81,7 +83,7 @@
     </table>
   </div>
 
-{{-- Session Success --}}
+  {{-- Session Success --}}
   <div>
     @if(session()->has('success'))
     <div>
@@ -90,6 +92,6 @@
     @endif
   </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 </html>
