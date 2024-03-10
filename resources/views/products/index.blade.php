@@ -68,11 +68,12 @@
                       {{$product->description}}
                   </td>
                   <td class="flex items-center px-6 py-4">
-                    {{-- href="{{route('product.edit', ['product' => $product])}}" --}}
-                      <a data-modal-target="default-modal-{{$product->id}}" data-modal-toggle="default-modal-{{$product->id}}"class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      {{-- Edit Product Toggle --}}
+                      <a data-modal-target="edit-modal-{{$product->id}}" data-modal-toggle="edit-modal-{{$product->id}}"class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                       {{-- Edit Product Modal--}}
                       @include('products.edit')
-                      <button data-modal-target="popup-modal" data-modal-toggle="popup-modal">
+                      {{-- Remove Product Toggle --}}
+                      <button type="menu" data-modal-target="remove-modal-{{$product->id}}" data-modal-toggle="remove-modal-{{$product->id}}">
                         <a class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
                       </button>
                       {{-- Remove Product Modal --}}
@@ -87,9 +88,7 @@
   {{-- Session Success --}}
   <div>
     @if(session()->has('success'))
-    <div>
-        {{session('success')}}
-    </div>
+      <h1>{{session('success')}}</h1>
     @endif
   </div>
 
