@@ -70,12 +70,11 @@
                   <td class="flex items-center px-6 py-4">
                     {{-- href="{{route('product.edit', ['product' => $product])}}" --}}
                       <a href="{{route('product.edit', ['product' => $product])}}" data-modal-target="edit-product-modal" data-modal-toggle="edit-product-modal" data-order="{{ $product->id }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                      <form method="post" action="{{route('product.destroy', ['product' => $product])}}">
-                        @csrf
-                        @method('delete')
-                        <button type="delete">
-                          <a class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a> </button>
-                      </form>
+                      <button data-modal-target="popup-modal" data-modal-toggle="popup-modal">
+                        <a class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                      </button>
+                      {{-- Remove Product Modal --}}
+                      @include('products.remove')
                   </td>
               </tr>
             @endforeach
