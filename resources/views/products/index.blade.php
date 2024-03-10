@@ -8,6 +8,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
 <body>
+  {{-- Session Success --}}
+  @include('products.alert')
+
+  {{-- Header Nav --}}
   <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="{{route('product.index')}}" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -83,13 +87,6 @@
             @endforeach
         </tbody>
     </table>
-  </div>
-
-  {{-- Session Success --}}
-  <div>
-    @if(session()->has('success'))
-      <h1>{{session('success')}}</h1>
-    @endif
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
