@@ -24,7 +24,7 @@ Below are screenshots of the application:
 
 1. ![Product Table](image.png): Main interface displaying the list of products.
 2. ![Create a Product](image-1.png): Adding a new product to the database.
-3. ![Update a Product](image-2.png)): Updating product details.
+3. ![Update a Product](image-2.png): Updating product details.
 4. ![Delete a Product](image-3.png): Deleting a product from the database.
 
 ## Installation
@@ -92,4 +92,4 @@ If you are using XAMPP for your database, follow these additional steps:
 
 ## Contributors
 
--   Adrienne Carlo Cortez
+-   [Adrienne Carlo Cortez](https://adrienne-portfolio-b.netlify.app/)
