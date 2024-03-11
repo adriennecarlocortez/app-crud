@@ -79,7 +79,7 @@ If you are using XAMPP for your database, follow these additional steps:
 
 -   Start the Apache and MySQL services in XAMPP Control Panel.
 -   Open your web browser and navigate to `http://localhost/phpmyadmin`.
--   Create a new database for your application (e.g., `product_table_crud`).
+-   Create a new database for your application (e.g., `app_crud`).
 -   Configure the `.env` file in your Laravel project to use the database credentials from your XAMPP setup.
 
 ## Technologies Used
