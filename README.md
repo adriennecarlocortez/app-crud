@@ -22,10 +22,10 @@ The Product Table CRUD application allows authenticated users to perform the fol
 
 Below are screenshots of the application:
 
-1. ![Product Table](image.png): Main interface displaying the list of products.
-2. ![Create a Product](image-1.png): Adding a new product to the database.
-3. ![Update a Product](image-2.png): Updating product details.
-4. ![Delete a Product](image-3.png): Deleting a product from the database.
+1. Main interface displaying the list of products: ![Product Table](image.png)
+2. Adding a new product to the database:![Create a Product](image-1.png)
+3. Updating product details: ![Update a Product](image-2.png)
+4. Deleting a product from the database: ![Delete a Product](image-3.png)
 
 ## Installation
 
