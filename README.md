@@ -34,7 +34,7 @@ To run the application locally, follow these steps:
 1. Clone this repository to your local machine.
 
 ```
-git clone https://github.com/your_username/product-table-crud.git
+git clone https://github.com/adriennecarlocortez/laravel-crud.git
 ```
 
 2. Navigate to the project directory.
@@ -70,3 +70,30 @@ npm install && npm run dev
 ```
 php artisan serve
 ```
+
+9. Visit `http://localhost:8000` in your web browser to access the application.
+
+### Database Setup with XAMPP
+
+If you are using XAMPP for your database, follow these additional steps:
+
+-   Start the Apache and MySQL services in XAMPP Control Panel.
+-   Open your web browser and navigate to `http://localhost/phpmyadmin`.
+-   Create a new database for your application (e.g., `product_table_crud`).
+-   Configure the `.env` file in your Laravel project to use the database credentials from your XAMPP setup.
+
+## Technologies Used
+
+-   Frontend: HTML, JavaScript
+-   CSS Framework: Tailwind CSS
+-   Backend: Laravel
+-   Authentication: Laravel Breeze
+-   Database: MySQL (via XAMPP), PostgreSQL, SQLite, etc. (depending on your Laravel configuration)
+
+## Contributors
+
+-   Adrienne Carlo Cortez
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
